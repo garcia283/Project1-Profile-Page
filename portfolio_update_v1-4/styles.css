@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: #222;
   background: white;
 }
@@ -15,11 +15,11 @@ body {
 
 a {
   text-decoration: none;
-  color: #999;
+  color: gray;
 }
-a:hover {
-  color: #6633ff;
-}
+/* a:hover {
+  color: lightblue;
+} */
 
 /* Section Styles */
 
@@ -27,79 +27,163 @@ a:hover {
   width: 100%;
   background: black;
   min-height: 30px;
-  padding: 10px;
+  padding: 10px 0px 10px 0px;
   position: fixed;
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+.profile-image {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 70px;
+}
+
+.profile-image:hover {
+  transform: scale(1.2) rotate(360deg);
+  transition: all .7s;
+}
+
+
+.profile-image-experience:hover {
+  transform: scale(1.2) rotate(360deg);
+  transition: all .7s;
+}
+
+.profile-image-experience {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75px;
+  height: 75px;
+
+}
+
 .nav {
   display: flex;
   justify-content: space-around;
-  font-weight: 700;
+  font-weight: 500;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
 }
 
-.nav .name {
-    display: block;
-    margin-right: auto;
-    color: white;
-}
-.nav li {
+
+/* .nav li {
   padding: 5px 10px 10px 10px;
-}
+} */
 .nav a {
   transition: all .5s;
+  max-width: 1200px;
+  padding: 0 30px;
 }
+
 .nav a:hover {
-  color: white
+  color: white;
 }
+
+/* .nav {
+  max-width: 1200px;
+  padding: 0 30px;
+} */
+
 
 header {
   text-align: center;
-  background: url('images/san-diego.jpg') no-repeat top center ;
+  background: url('images/san-diego.jpg') no-repeat top center;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
 }
+
 header {
-  line-height: 1.5;
+  line-height: 1.0;
+  min-height: 480px;
 }
-header .profile-image {
+
+header .tagName {
+  margin-top: 20px;
+}
+
+.nightSD {
+  text-align: center;
+  background-image: url('images/nighttimeSD.jpg');
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+  min-height: 950px;
+}
+
+
+.message {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+  font-weight: lighter;
+}
+
+
+/* header .profile-image {
   margin-top: 50px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
   border: 3px solid white;
   transition: all .8s;
+} */
+.tagName {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  font-weight: lighter;
 }
-header .profile-image:hover {
-  transform: scale(1.0) rotate(10deg);
+
+.city {
+  color: white;
+  font-family: cursive;
+  font-weight: lighter;
+  margin: 0 auto;
+
 }
-.tag {
-  background-color: #efefef;
-  color: black;
-  padding: 10px;
-  border-radius: 5px;
-  display: table;
-  margin: 10px auto;
-}
-.location {
+
+/* .location {
   background-color: black;
   color: lightblue;
-}
+} */
 .card {
   margin: 30px;
   padding: 20px 40px 40px;
+  min-width: 300px;
   max-width: 500px;
   text-align: left;
   background: white;
-  border-bottom: 4px solid #ccc;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
   border-radius: 10px;
   transition: all .5s;
 }
+
+.card2 {
+  margin: 30px;
+  padding: 20px 40px 40px;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: left;
+  background: white;
+  border-top: 4px solid white;
+  border-bottom: 4px solid white;
+  border-radius: 10px;
+  transition: all .5s;
+}
+
 .card:hover {
   border-color: royalblue;
+}
+
+.card2:hover {
+  border-color: orange;
 }
 
 ul.skills {
@@ -121,10 +205,8 @@ ul.skills {
 }
 
 .hobbies li {
-  line-height: 1.5;
+  line-height: 1.7;
 }
-
-
 
 footer {
   width: 100%;
@@ -157,11 +239,11 @@ a.social {
   opacity: .4;
   transition: all .5s;
 }
-a.twitter {
+/* a.twitter {
   background-image: url(images/twitter.svg);
 }
 a.linkedin {
-  background-image: url(images/linkedin.svg);
+  background-image: url(images/linkedin.svg); */
 }
 a.github {
   background-image: url(images/github.svg);
@@ -183,15 +265,7 @@ a.social:hover {
       -ms-flex-pack: distribute;
       justify-content: space-around;
       margin: 0 auto;
-  }
 
-  header {
-    min-height: 470px;
-  }
-
-  .nav {
-    max-width: 1200px;
-    padding: 0 30px;
   }
 
 
@@ -210,4 +284,6 @@ a.social:hover {
     color: gray;
   }
 
-}
+  h2 {
+    font-weight: normal;
+  }
